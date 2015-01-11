@@ -24,8 +24,8 @@ rm(dataFrameTest)
 png(filename="plot3.png")
 #hist(histX, main="Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red", )
 with( dataFilter, plot(Time, Sub_metering_1, type = "l", main="", ylab = "Energy Sub-Metering", axes=F))
-with( dataFilter, plot(Time, Sub_metering_2, type = "l", main="", ylab = "", axes=F, col="red"))
-with( dataFilter, plot(Time, Sub_metering_3, type = "l", main="", ylab = "", axes=F, col="blue"))
+with( dataFilter, lines(Time, Sub_metering_2, type = "l", main="", ylab = "", col="red"))
+with( dataFilter, lines(Time, Sub_metering_3, type = "l", main="", ylab = "", col="blue"))
 
 axis(1)
 #Could have used weekday function. No time to finish before assignment due.
