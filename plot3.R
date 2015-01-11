@@ -29,5 +29,6 @@ with( dataFilter, plot(Time, Sub_metering_3, type = "l", main="", ylab = "", axe
 
 axis(1)
 #Could have used weekday function. No time to finish before assignment due.
-axis(2, at=dataFilter[c(1, length(dataFilter[,1]/2, length(dataFilter[,1])), ], labels = c("Thu", "Fri", "Sat"))
+axis(2)
+#axis(2, at=dataFilter[c(1, length(dataFilter[,1]/2, length(dataFilter[,1])), ], labels = c("Thu", "Fri", "Sat"))
 dev.off()
