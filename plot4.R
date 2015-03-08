@@ -18,7 +18,7 @@ data$Time <- strptime(paste(data$Date,data$Time), format = "%d/%m/%Y %H:%M:%S")
 png(filename="plot4.png")
 par(mfrow=c(2,2))
 #1,1
-with(data, plot(Time, Global_active_power, type = "l", main="", ylab = "Global Active Power (kilowatts)"))
+with(data, plot(Time, Global_active_power, type = "l", main="", ylab = "Global Active Power"))
 
 #1,2
 #voltage dateTime
@@ -28,9 +28,9 @@ with(data, plot(Time, Voltage, type = "l", main="", ylab = "Voltage", xlab="date
 with( data, plot(Time, Sub_metering_1, type = "l", main="", ylab = "Energy Sub-Metering"))
 with( data, lines(Time, Sub_metering_2, type = "l", main="", ylab = "", col="red"))
 with( data, lines(Time, Sub_metering_3, type = "l", main="", ylab = "", col="blue"))
-legend("topright", lty = 1, col = c("black","red","blue"), legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright", lty = 1, bty = "n", col = c("black","red","blue"), legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 #2,2
-with( data, plot(Time, Global_reactive_power, type = "l", main="", ylab = "Voltage", xlab="datetime"))
+with( data, plot(Time, Global_reactive_power, type = "l", main="", xlab="datetime"))
 
 dev.off()
