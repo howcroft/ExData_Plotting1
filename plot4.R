@@ -34,3 +34,4 @@ legend("topright", lty = 1, bty = "n", col = c("black","red","blue"), legend = c
 with( data, plot(Time, Global_reactive_power, type = "l", main="", xlab="datetime"))
 
 dev.off()
+
